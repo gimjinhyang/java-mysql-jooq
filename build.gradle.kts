@@ -57,7 +57,7 @@ jooq {
         generator {
             database {
                 name = "org.jooq.meta.mysql.MySQLDatabase\n"
-                includes = ".*"
+                includes = "test.*"
                 excludes = ""
             }
             generate {}

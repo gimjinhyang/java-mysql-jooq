@@ -56,7 +56,7 @@ jooq {
         }
         generator {
             database {
-                name = "org.jooq.meta.mysql.MySQLDatabase\n"
+                name = "org.jooq.meta.mysql.MySQLDatabase"
                 includes = "test.*"
                 excludes = ""
             }
@@ -71,4 +71,12 @@ jooq {
 
 tasks.withType<Test> {
     useJUnitPlatform()
+}
+
+tasks.all {
+//    println(name)
+    if (name.equals("jooqCodegen")) {
+        // disable auto generation jooq
+        enabled = false
+    }
 }
